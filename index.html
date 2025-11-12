@@ -101,13 +101,7 @@ if (currentDate > expiryDate) {
 }
 
 // Data arrays
-const locations = [
-  ["Rajahmundry", "46NA-03", "919701970142"],
-  ["Bhimavaram", "4603-10", "919701970142"],
-  ["Mandapeta", "SJH1-01", "919701970142"],
-  ["Amalapuram", "SJG1-01", "919701970142"],
-  ["Tadepalligudem", "4603-0K", "919701970142"]
-];
+const locations = [["Rajahmundry", "46NA-03", "919701970142"],["Bhimavaram", "4603-10", "919701970142"],["Mandapeta", "SJH1-01", "919701970142"],["Amalapuram", "SJG1-01", "919701970142"],["Tadepalligudem", "4603-0K", "919701970142"]];
 
 const models = [
   "XUV700","Scorpio-N","Thar","Thar Roxx","Bolero","Bolero Neo","Bolero Neo Plus",
@@ -165,7 +159,7 @@ function filterLocations() {
     div.textContent = loc[0];
     div.onclick = () => {
       document.getElementById("Loc").value = loc[0];
-      selectedPhone = "919701970142";
+      selectedPhone = loc[2];
       results.innerHTML = "";
     };
     results.appendChild(div);
@@ -257,5 +251,3 @@ document.getElementById("frm").addEventListener("submit", function (e) {
 </script>
 </body>
 </html>
-
-
